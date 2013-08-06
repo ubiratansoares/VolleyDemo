@@ -1,0 +1,25 @@
+# Built application files
+*.apk
+*.ap_
+
+# Files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+
+#Proguard
+proguard-project.txt
+
+# OSX
+.DS_Store
+
+# Eclipse
+project.properties
+.classpath
+.project
+.settings/

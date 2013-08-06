@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:background="@color/light_gray"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="São Paulo"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/humidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/name"
+        android:layout_margin="5dp"
+        android:drawablePadding="2dp"
+        android:drawableRight="@drawable/water"
+        android:text="82%"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/humidity"
+        android:layout_below="@+id/humidity"
+        android:drawableRight="@drawable/termometer"
+        android:gravity="center"
+        android:text="2°"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        tools:ignore="HardcodedText" />
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/image_weather"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:scaleType="center"
+        android:layout_alignBottom="@+id/temperature"
+        android:layout_alignLeft="@+id/name"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/condition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/temperature"
+        android:layout_alignBottom="@+id/temperature"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/image_weather"
+        android:text="Clouds"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>
